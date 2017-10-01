@@ -1,0 +1,2 @@
+# gebietsstandsaenderungen
+ags uebersetzungstabellen erstellen
