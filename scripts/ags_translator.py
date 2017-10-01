@@ -43,6 +43,7 @@ header = ['satzart','textkennzeichen',
 df_current_ags.columns = header
 
 
+#apply filters (drop rows where gemeinde = nan) / generate current ags column / export to csv
 df_current_ags = df_current_ags[df_current_ags.gemeinde.notnull()]
 df_current_ags['ags_'+str(currentYear)] = df_current_ags['land'] + df_current_ags['rb'] + df_current_ags['kreis'] + df_current_ags['gemeinde']
 df_current_ags.to_csv(os.path.join(output_dir, 'ags_current.csv'), index=False, encoding='utf-8', sep='\t', decimal=',' )
